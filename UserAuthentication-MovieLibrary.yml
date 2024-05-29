@@ -1,24 +1,34 @@
 server:
-  port: 8080
+    port: 8000
 
 spring:
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:3306/movies?createDatabaseIfNotExist=true
-    username: root
     password: Surya@555
+    url: jdbc:mysql://localhost:3306/movies?createDatabaseIfNotExist=true
+    username: root
   jpa:
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
-    hibernate:
-      ddl-auto: update
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka/}     
+  security:
+    user:
+      name: admin
+      # password: admin123
 
-management:
-  tracing:
-    sampling:
-      probability: 1.0
+  mail:
+    host: smtp.gmail.com         # Use Gmail's SMTP server
+    port: 587                    # Port for TLS (587 for TLS, 465 for SSL)
+    username: suryatejayatam9866@gmail.com  # Your Gmail email address
+    password: lgaajgfnzzylrulr  # Your Gmail password or app-specific password
+    properties:
+      mail:
+        smtp:
+          auth: true               # Enable SMTP authentication
+          starttls:
+            enable: true           # Enable STARTTLS for secure communication
+    default-encoding: UTF-8        # Default character encoding
+    protocol: smtp                 # Email protocol (smtp or smtps)
+    test-connection: true          # Test the connection on startup
