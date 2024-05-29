@@ -21,8 +21,8 @@ spring:
   mail:
     host: smtp.gmail.com         # Use Gmail's SMTP server
     port: 587                    # Port for TLS (587 for TLS, 465 for SSL)
-    username: suryatejayatam9866@gmail.com  # Your Gmail email address
-    password: lgaajgfnzzylrulr  # Your Gmail password or app-specific password
+    username: tejusurya066@gmail.com  # Your Gmail email address
+    password: xnyhesubtueqroho  # Your Gmail password or app-specific password
     properties:
       mail:
         smtp:
